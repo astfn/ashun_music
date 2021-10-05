@@ -2,7 +2,6 @@ import { memo } from "react";
 import { FriendsWrapper, FriendsContent } from "./style.js";
 
 export default memo(function ASFriends(props) {
-  console.log(props.route);
   return (
     <FriendsWrapper id="friends">
       <FriendsContent className="wrap-v2">

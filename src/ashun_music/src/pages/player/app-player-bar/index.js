@@ -241,7 +241,6 @@ const ASAppPlayerBar = (props) => {
             className="sprite_playbar btn playerList"
             onClick={() => {
               setShowPanel(!showPanel);
-              console.log("ss");
             }}
           >
             <span>{playList.length}</span>
