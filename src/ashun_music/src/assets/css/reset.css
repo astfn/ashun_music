@@ -49,6 +49,13 @@ img {
 }
 
 /* 全局样式 */
+:root {
+  --color-deep: #9b0909;
+  --color-middle: #c10d0c;
+  --color-shallow: #c20c0c;
+  --color-light: red;
+}
+
 body,
 textarea,
 select,

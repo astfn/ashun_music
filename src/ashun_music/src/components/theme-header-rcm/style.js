@@ -8,7 +8,7 @@ export const ThemeHeaderRCMWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #c10d0c;
+  border-bottom: 2px solid var(--color-middle);
   background-position: -225px -156px;
   .left {
     height: 100%;

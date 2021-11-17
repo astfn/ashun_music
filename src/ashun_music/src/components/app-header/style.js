@@ -103,6 +103,6 @@ export default styled.div`
   }
   .divider {
     height: 5px;
-    background-color: #c20c0c;
+    background-color: var(--color-shallow);
   }
 `;

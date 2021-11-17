@@ -4,7 +4,7 @@ export const TopWrapper = styled.div`
   margin-top: -5px;
   width: 100%;
   height: 34px;
-  background-color: #c20c0c;
+  background-color: var(--color-shallow);
 
   .top_menu {
     height: 100%;
@@ -29,7 +29,7 @@ export const TopWrapper = styled.div`
         }
         &.active span,
         &:hover span {
-          background-color: #9b0909;
+          background-color: var(--color-deep);
         }
       }
     }
