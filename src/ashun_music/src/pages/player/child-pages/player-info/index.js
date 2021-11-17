@@ -37,11 +37,16 @@ const ASPlayerInfo = (props) => {
       </div>
       <div className="desc">
         <p>
-          歌手：<a href="/#">{currentSongInfo.singerNames}</a>
+          歌手：
+          <a href="/#" onClick={(e) => e.preventDefault()}>
+            {currentSongInfo.singerNames}
+          </a>
         </p>
         <p>
           所属专辑：
-          <a href="/#">Ashuntefannao😀/{currentSongInfo.songInfo.albumName}</a>
+          <a href="/#" onClick={(e) => e.preventDefault()}>
+            Ashuntefannao😀/{currentSongInfo.songInfo.albumName}
+          </a>
         </p>
       </div>
     </div>
@@ -84,7 +89,9 @@ const ASPlayerInfo = (props) => {
         </div>
         <div className="generator">
           <i className="icon sprite_icon2" />
-          <a href="/#">生成外链播放器</a>
+          <a href="/#" onClick={(e) => e.preventDefault()}>
+            生成外链播放器
+          </a>
         </div>
       </Portrait>
       <InfoContent isSpread={isSpread}>

@@ -16,7 +16,11 @@ const ASAlbumsCover = function (props) {
     <ASAlbumsCoverWrapper width={width} imgSize={imgSize} bgP={bgP}>
       <div className="top">
         <img src={formatImgSize(picUrl, `${imgSize}x${imgSize}`)} alt={name} />
-        <a className="mask image_cover" href="/#">
+        <a
+          className="mask image_cover"
+          href="/#"
+          onClick={(e) => e.preventDefault()}
+        >
           {""}
         </a>
       </div>

@@ -21,7 +21,9 @@ const ASThemeHeaderRCM = function (props) {
         </ul>
       </div>
       <div className="right">
-        <a href={moreLink}>更多</a>
+        <a href={moreLink} onClick={(e) => e.preventDefault()}>
+          更多
+        </a>
         <i className="icon sprite_02"></i>
       </div>
     </ThemeHeaderRCMWrapper>

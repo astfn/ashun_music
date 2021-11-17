@@ -41,10 +41,18 @@ const ASSimilarSongs = (props) => {
           return (
             <div key={item.id} className="item">
               <div className="info">
-                <a href="/#" className="song-name text-nowrap">
+                <a
+                  href="/#"
+                  className="song-name text-nowrap"
+                  onClick={(e) => e.preventDefault()}
+                >
                   {item.name}
                 </a>
-                <a href="/#" className="artist-name text-nowrap">
+                <a
+                  href="/#"
+                  className="artist-name text-nowrap"
+                  onClick={(e) => e.preventDefault()}
+                >
                   {names}
                 </a>
               </div>

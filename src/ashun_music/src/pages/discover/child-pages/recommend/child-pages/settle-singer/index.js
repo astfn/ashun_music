@@ -18,7 +18,12 @@ const ASSettleSinger = (props) => {
 
   const renderItems = () =>
     settleSingerList.map((item, index) => (
-      <a href="/#" className="item" key={item.id}>
+      <a
+        href="./#"
+        className="item"
+        key={item.id}
+        onClick={(e) => e.preventDefault()}
+      >
         <img src={item.img1v1Url} alt={item.name} />
         <div className="info">
           <span className="name text-nowrap">{item.name}</span>
@@ -34,7 +39,9 @@ const ASSettleSinger = (props) => {
       <ASThemeHeaderSmall {...headerInfo} />
       <div className="content">{renderItems()}</div>
       <div className="apply-for">
-        <a href="/abc">申请成为网易音乐人</a>
+        <a href="./#" onClick={(e) => e.preventDefault()}>
+          申请成为网易音乐人
+        </a>
       </div>
     </SettleSingerWrapper>
   );

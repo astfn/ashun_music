@@ -23,7 +23,13 @@ const ASSongsCover = function (props) {
       width={width}
     >
       <div className="top">
-        <a className="mask sprite_covor" href="/#">
+        <a
+          className="mask sprite_covor"
+          href="./#"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           {""}
         </a>
         <div className="info sprite_covor">

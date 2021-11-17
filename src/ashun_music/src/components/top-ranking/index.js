@@ -16,7 +16,11 @@ const ASTopRanking = (props) => {
       <div className="top">
         <div className="left">
           <img src={coverImgUrl} alt={name} />
-          <a href="/#" className="mask image_cover">
+          <a
+            href="./#"
+            className="mask image_cover"
+            onClick={(e) => e.preventDefault()}
+          >
             {""}
           </a>
         </div>
@@ -50,7 +54,9 @@ const ASTopRanking = (props) => {
         ))}
       </div>
       <div className="bottom">
-        <a href="/#">查看全部 &gt;</a>
+        <a href="./#" onClick={(e) => e.preventDefault()}>
+          查看全部 &gt;
+        </a>
       </div>
     </TopRankingWrapper>
   );

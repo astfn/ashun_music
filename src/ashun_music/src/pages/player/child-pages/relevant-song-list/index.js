@@ -34,10 +34,16 @@ const ASRelevantSongList = (props) => {
                 src={formatImgSize(item.coverImgUrl, "50x50")}
                 alt={item.name}
               />
-              <a href="/#">{""}</a>
+              <a href="/#" onClick={(e) => e.preventDefault()}>
+                {""}
+              </a>
             </div>
             <div className="info">
-              <a href="/#" className="text-nowrap">
+              <a
+                href="/#"
+                className="text-nowrap"
+                onClick={(e) => e.preventDefault()}
+              >
                 {item.name}
               </a>
               <div className="desc-box">
