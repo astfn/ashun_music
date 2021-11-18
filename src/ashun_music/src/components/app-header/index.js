@@ -6,6 +6,7 @@ import { SearchOutlined } from "@ant-design/icons";
 
 import { headerLinks } from "@/common/local-data.js";
 import StyledWrapper from "./style";
+import { CaretRightOutlined } from "@ant-design/icons";
 
 export default withRouter(
   memo(function ASAppHeader(props) {
@@ -15,6 +16,9 @@ export default withRouter(
     function jumpRouter(path, index) {
       props.history.replace(path);
       setCurrentIndex(index);
+    }
+    function jumpLogin() {
+      props.history.replace("/login");
     }
 
     /* 页面代码 */
@@ -36,7 +40,7 @@ export default withRouter(
             >
               <p>{link.title}</p>
               {renderHot(link.title)}
-              <i className="btm_Icon sprite_01"></i>
+              <CaretRightOutlined className="btm_Icon theme_transition" />
             </div>
           );
         } else {
@@ -50,7 +54,7 @@ export default withRouter(
             >
               <p>{link.title}</p>
               {renderHot(link.title)}
-              <i className="btm_Icon sprite_01"></i>
+              <CaretRightOutlined className="btm_Icon theme_transition" />
             </a>
           );
         }
@@ -82,7 +86,7 @@ export default withRouter(
             <div className="center">
               <span>创作者中心</span>
             </div>
-            <div className="login">
+            <div className="login" onClick={jumpLogin}>
               <span>登录</span>
             </div>
           </div>

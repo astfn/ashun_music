@@ -24,7 +24,7 @@ const ASPlayHeader = (props) => {
   const { setShowPanel } = useContext(appPlayerBarCtx);
 
   return (
-    <PlayHeaderWrapper>
+    <PlayHeaderWrapper className="theme_transition">
       <PlayHeaderLeft>
         <div className="title-box">
           <span>播放列表({999})</span>

@@ -809,3 +809,47 @@ export const defaultPlayList = [
 ];
 //默认播放歌曲
 export const defaultCurrentSong = defaultPlayList[0];
+
+//主题颜色数据
+export const AppThemes = {
+  purple: {
+    "--color-deep": "#531dab",
+    "--color-middle": "#722ed1",
+    "--color-shallow": "#9254de",
+    "--color-light": "#d3adf7",
+    "--color-near-white": "#f9f0ff",
+  },
+  yellow: {
+    "--color-deep": "#ad4e00",
+    "--color-middle": "#d46b08",
+    "--color-shallow": "#fa8c16",
+    "--color-light": "#ffa940",
+    "--color-near-white": "#fff7e6",
+
+    // "--color-deep": "#ad6800",
+    // "--color-middle": "#d48806",
+    // "--color-shallow": "#faad14",
+    // "--color-light": "#ffd666",
+    // "--color-near-white": "#ffd666",
+
+    // "--color-deep": "#cf8013",
+    // "--color-middle": "#cf8013",
+    // "--color-shallow": "#f5a623",
+    // "--color-light": "#ffd375",
+    // "--color-near-white": "#ffd375",
+  },
+  cyan: {
+    "--color-deep": "#006d75",
+    "--color-middle": "#08979c",
+    "--color-shallow": "#13c2c2",
+    "--color-light": "#e6fffb",
+    "--color-near-white": "#e6fffb",
+  },
+  magenta: {
+    "--color-deep": "#9e1068",
+    "--color-middle": "#c41d7f",
+    "--color-shallow": "#eb2f96",
+    "--color-light": "#fff0f6",
+    "--color-near-white": "#fff0f6",
+  },
+};

@@ -30,6 +30,9 @@ export default styled.div`
           white-space: nowrap;
           padding: 0px 19px;
         }
+        .anticon.anticon-caret-right {
+          opacity: 0;
+        }
       }
       .link.active,
       .link:hover {
@@ -38,17 +41,20 @@ export default styled.div`
           color: white;
         }
       }
-      .link.active > i.btm_Icon {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 64px;
-        width: 12px;
-        height: 7px;
-        margin-left: -6px;
-        overflow: hidden;
-        background-position: -226px 0;
+      .link.active > .btm_Icon {
+        &.anticon.anticon-caret-right {
+          opacity: 1;
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 61px;
+          margin-left: -6px;
+          transform: rotate(-90deg);
+          overflow: hidden;
+          color: var(--color-shallow);
+        }
       }
+
       a.link {
         text-decoration: none;
       }
@@ -95,9 +101,15 @@ export default styled.div`
         }
       }
       .login {
-        margin-top: -3px;
+        margin-top: -2px;
         width: 28px;
         color: #787878;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          font-weight: bold;
+          color: var(--color-light);
+        }
       }
     }
   }

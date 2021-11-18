@@ -4,8 +4,12 @@ const bg_img = require("@/assets/images/playpanel_bg.png").default;
 export const PlayHeaderWrapper = styled.div`
   width: 100%;
   height: 40px;
-  background: url(${bg_img}) 0 0;
-  display: flex; ;
+  /* background: url(${bg_img}) 0 0; */
+  display: flex;
+
+  background-color: var(--color-middle);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `;
 export const PlayHeaderLeft = styled.div`
   padding: 0px 20px;
@@ -14,7 +18,7 @@ export const PlayHeaderLeft = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: yellowgreen; */
+
   .title-box {
     padding-left: 12px;
     font-size: 14px;
@@ -36,6 +40,7 @@ export const PlayHeaderLeft = styled.div`
     }
     .star-all,
     .clear {
+      color: var(--color-near-white);
       display: flex;
       align-items: center;
       cursor: pointer;

@@ -50,10 +50,11 @@ img {
 
 /* 全局样式 */
 :root {
-  --color-deep: #9b0909;
-  --color-middle: #c10d0c;
-  --color-shallow: #c20c0c;
-  --color-light: red;
+  --color-deep: #ad4e00;
+  --color-middle: #d46b08;
+  --color-shallow: #fa8c16;
+  --color-light: #ffa940;
+  --color-near-white: #fff7e6;
 }
 
 body,
@@ -132,7 +133,10 @@ span.link:hover {
 .sprite_playlist {
   background: url(../images/playlist_sprite.png) no-repeat 0 9999px;
 }
-
+/* 主题颜色过渡 */
+.theme_transition {
+  transition: background-color 0.3s, color 0.3s;
+}
 /* 需要铺满的遮罩效果 */
 .image_cover {
   position: absolute;

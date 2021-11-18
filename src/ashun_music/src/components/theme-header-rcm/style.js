@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ThemeHeaderRCMWrapper = styled.div`
-  padding: 0 10px 0 34px;
+  padding: 0 10px 0 0px;
   width: 100%;
   height: 35px;
   display: flex;
@@ -9,10 +9,30 @@ export const ThemeHeaderRCMWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid var(--color-middle);
-  background-position: -225px -156px;
+  /* background-position: -225px -156px; */
   .left {
     height: 100%;
     display: flex;
+    .circle {
+      margin: -3px 10px 0px 10px;
+      align-self: center;
+
+      width: 15px;
+      height: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: var(--color-shallow);
+
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
     .title {
       font-size: 20px;
     }
@@ -37,12 +57,9 @@ export const ThemeHeaderRCMWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    .icon {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin-left: 4px;
-      background-position: 0 -240px;
+    .anticon.anticon-caret-right {
+      padding: 0px 3px;
+      color: var(--color-deep);
     }
   }
 `;

@@ -102,15 +102,20 @@ export const PlayInfo = styled.div`
 
         .ant-slider-track {
           height: 9px;
-          background: url(${progress_bar_img}) left -66px;
+          /* background: url(${progress_bar_img}) left -66px; */
+          border-radius: 5px;
+          background-color: var(--color-near-white);
         }
 
         .ant-slider-handle {
-          width: 22px;
+          /* width: 22px;
           height: 24px;
           border: none;
           margin-top: -7px;
-          background: url(${progress_bar_icon}) 0 -250px;
+          background: url(${progress_bar_icon}) 0 -250px; */
+          margin-top: -3.5px;
+          background-color: var(--color-shallow);
+          border-color: #fff;
         }
       }
       .timeInfo {
