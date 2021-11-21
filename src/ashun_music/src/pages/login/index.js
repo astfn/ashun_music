@@ -23,7 +23,7 @@ const ASLogin = (props) => {
   };
 
   const handleLogin = () => {
-    console.log(phone, setPhone);
+    console.log(phone, password);
   };
   /* render相关 */
   const renderForm = () => {

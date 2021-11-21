@@ -29,8 +29,14 @@ const ASLyricPanel = (props) => {
     return index === currentLyricIndex;
   };
 
+  //render 相关
+  const { width = "100%", height = "100%" } = props;
+  const propsStyle = {
+    width,
+    height,
+  };
   return (
-    <LyricPanelWrapper>
+    <LyricPanelWrapper {...propsStyle}>
       <div className="lyric-box" ref={lyricBoxRef}>
         <h2>❤Ashuntefannao❤</h2>
         {currentLyrics.map((line, index) => (

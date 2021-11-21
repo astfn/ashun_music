@@ -15,12 +15,16 @@ const ASAppPlayPanel = (props) => {
     shallowEqual
   );
 
+  //render 相关
+  const playListStyles = {
+    width: "555px",
+  };
   return (
     <AppPlayPanelWrapper>
       <ASPlayHeader />
       <div className="main">
         <img src={currentSong.al.picUrl + "?imageView&blur=10x10"} alt="" />
-        <ASPlayList />
+        <ASPlayList {...playListStyles} />
         <ASLyricPanel />
       </div>
     </AppPlayPanelWrapper>

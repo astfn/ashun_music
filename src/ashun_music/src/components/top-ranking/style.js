@@ -52,7 +52,7 @@ export const TopRankingWrapper = styled.div`
 
   .middle {
     margin-top: 20px;
-    height: 319px;
+    /* height: 319px; */
     .item {
       height: 32px;
       line-height: 32px;

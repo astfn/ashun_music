@@ -5,7 +5,7 @@ import { TopRankingWrapper } from "./style.js";
 import { getCurrentSongAction } from "@/pages/player/store/actionCreators.js";
 
 const ASTopRanking = (props) => {
-  const { name, coverImgUrl, tracks = [] } = props;
+  const { name, coverImgUrl, tracks = [], nums = 10 } = props;
 
   const dispatch = useDispatch();
   const playSong = (id) => {
@@ -34,7 +34,7 @@ const ASTopRanking = (props) => {
       </div>
 
       <div className="middle">
-        {tracks.slice(0, 10).map((item, index) => (
+        {tracks.slice(0, nums).map((item, index) => (
           <div className="item" key={item.id}>
             <div className="rank">
               <span>{index + 1}</span>

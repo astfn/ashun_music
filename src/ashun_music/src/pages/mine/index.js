@@ -1,16 +1,27 @@
 import { memo } from "react";
-import { MineWrapper, MineContent } from "./style.js";
+import { withRouter } from "react-router";
 
-export default memo(function ASDiscover() {
+import { MineWrapper, OffLineWrapper } from "./style.js";
+
+const ASDiscover = (props) => {
+  /* handleEvent */
+  const jumpLogin = (e) => {
+    e.preventDefault();
+    props.history.replace("/login");
+  };
+
   return (
     <MineWrapper id="friends">
-      <MineContent className="wrap-v2">
+      <OffLineWrapper className="wrap-v2">
         <div className="img-box ">
-          <a className="login" href="/#">
+          <div className="cover-title">登录阿顺音乐</div>
+          <a className="login" href="/#" onClick={jumpLogin}>
             立即登录
           </a>
         </div>
-      </MineContent>
+      </OffLineWrapper>
     </MineWrapper>
   );
-});
+};
+
+export default withRouter(memo(ASDiscover));

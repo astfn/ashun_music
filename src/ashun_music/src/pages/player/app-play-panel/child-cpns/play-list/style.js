@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const PlayListWrapper = styled.div`
   position: relative;
   padding: 0px 10px;
-  width: 555px;
-  height: 100%;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 
   .content {
     width: 100%;
@@ -27,6 +27,7 @@ export const PlayListWrapper = styled.div`
       width: 100%;
       min-height: 28px;
       display: flex;
+      justify-content: space-around;
       align-items: center;
       cursor: pointer;
 

@@ -1,4 +1,7 @@
 import styled from "styled-components";
+
+const ashun_logo = require("@/assets/images/ashun_logo.png").default;
+
 export default styled.div`
   width: 100%;
   height: 75px;
@@ -17,14 +20,21 @@ export default styled.div`
       .logo {
         width: 178px;
         height: 100%;
-        background-position: 0px 0px;
+        /* background-position: 0px 0px; */
         text-indent: -9999px;
+        cursor: pointer;
+
+        margin-left: -10px;
+        margin-right: 10px;
+        background: url(${ashun_logo}) no-repeat 0 17px / contain;
       }
       .link {
         position: relative;
         text-align: center;
         font-size: 14px;
         line-height: 70px;
+        cursor: pointer;
+        user-select: none;
         p {
           color: #ccc;
           white-space: nowrap;
@@ -32,6 +42,10 @@ export default styled.div`
         }
         .anticon.anticon-caret-right {
           opacity: 0;
+          position: absolute;
+          left: 50%;
+          top: 61px;
+          margin-left: -6px;
         }
       }
       .link.active,

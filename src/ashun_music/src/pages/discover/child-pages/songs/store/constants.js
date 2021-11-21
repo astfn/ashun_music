@@ -1,0 +1,1 @@
+export const CHANGE_HOT_RECOMMENDS = "songs/CHANGE_SONGS";

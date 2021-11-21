@@ -38,8 +38,14 @@ const ASPlayList = (props) => {
     };
     return result;
   };
+
+  const { width = "100%", height = "100%" } = props;
+  const propsStyle = {
+    width,
+    height,
+  };
   return (
-    <PlayListWrapper>
+    <PlayListWrapper {...propsStyle}>
       <div className="content">
         {playList.map((song, index) => {
           const Info = getSongInfo(song);

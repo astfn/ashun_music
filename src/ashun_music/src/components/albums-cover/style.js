@@ -25,7 +25,7 @@ export const ASAlbumsCoverWrapper = styled.div`
     .albumName {
       display: block;
       padding: 5px 0px 0px 0px;
-      width: 100%;
+      width: 100px;
     }
 
     .artist {

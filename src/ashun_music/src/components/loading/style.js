@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LoadingWeapper = styled.div`
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ export const LoadingWeapper = styled.div`
     svg {
       width: 80px;
       height: 80px;
-      color: red;
+      color: var(--color-deep);
     }
   }
   .text-box {
@@ -23,7 +23,12 @@ export const LoadingWeapper = styled.div`
     transform: translate(-50%, -50%);
 
     color: transparent;
-    background-image: linear-gradient(to right, pink, #ff416c, #ff4b2b);
+    background: linear-gradient(
+      to right,
+      var(--color-deep),
+      var(--color-middle),
+      var(--color-shallow)
+    );
     background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
