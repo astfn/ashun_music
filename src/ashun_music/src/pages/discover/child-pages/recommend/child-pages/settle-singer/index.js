@@ -3,7 +3,9 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 
 import { SettleSingerWrapper } from "./style.js";
 import ASThemeHeaderSmall from "@/components/theme-header-small";
+
 import { getSettleSingerListAction } from "../../store/actionCreators.js";
+import { SETTLE_SINGER_LIMIT } from "@/common/constants.js";
 
 const ASSettleSinger = (props) => {
   const settleSingerList = useSelector(
@@ -13,7 +15,7 @@ const ASSettleSinger = (props) => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getSettleSingerListAction());
+    dispatch(getSettleSingerListAction(SETTLE_SINGER_LIMIT));
   }, [dispatch]);
 
   const renderItems = () =>

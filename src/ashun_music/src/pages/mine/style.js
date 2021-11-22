@@ -52,3 +52,42 @@ export const OffLineWrapper = styled.div`
     }
   }
 `;
+
+export const OnLineWrapper = styled.div`
+  padding: 20px;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  border-bottom: none;
+  background-color: white;
+`;
+
+export const PlayListWrapper = styled.div`
+  padding: 20px;
+  background-color: var(--color-near-white);
+
+  .paly-list-prev {
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 3px 2px var(--color-deep);
+    overflow: hidden;
+
+    .prev-header {
+      margin-top: 13px;
+      display: flex;
+      font-size: 20px;
+      color: var(--color-near-white);
+      text-align: center;
+      .left {
+        width: ${(props) => props.width};
+      }
+      .right {
+        flex: 1;
+      }
+    }
+    .prev-content {
+      padding: 20px 0px 10px 0px;
+      display: flex;
+    }
+  }
+`;

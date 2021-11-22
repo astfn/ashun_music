@@ -13,7 +13,7 @@ import { ASNewAlbumWrapper } from "./style.js";
 
 const ASNewAlbum = function (props) {
   /*redux*/
-  const { newAlbums } = useSelector(
+  const { newAlbums = [] } = useSelector(
     (state) => ({ newAlbums: state.getIn(["recommend", "newAlbums"]) }),
     shallowEqual
   );

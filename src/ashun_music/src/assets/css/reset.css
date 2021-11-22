@@ -167,6 +167,22 @@ span.link:hover {
   background-clip: text;
   animation: lyric_color_animat linear 1.5s infinite;
 }
+
+/* 头像卡片 */
+
+.ant-popover-content .ant-popover-title {
+  font-weight: bold;
+  text-align: center;
+}
+.ant-popover-content .ant-popover-inner-content {
+  font-size: 13px;
+}
+.ant-popover-content .ant-popover-inner-content i {
+  margin-left: 3px;
+  font-size: 12px;
+  color: #666;
+}
+
 @keyframes lyric_color_animat {
   to {
     background-position: 0 -200%;

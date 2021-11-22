@@ -123,9 +123,9 @@ export function getTopListAction(idx) {
   };
 }
 
-export function getSettleSingerListAction() {
+export function getSettleSingerListAction(limit) {
   return (dispatch, getState) => {
-    getSettleSingerList(5, 5001).then(
+    getSettleSingerList(limit, 5001).then(
       (data) => {
         dispatch(changeSettleSingerList(data.artists));
       },

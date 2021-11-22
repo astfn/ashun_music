@@ -124,6 +124,10 @@ export default styled.div`
           font-weight: bold;
           color: var(--color-light);
         }
+
+        .ant-avatar.ant-avatar-circle.ant-avatar-image {
+          box-shadow: 0px 0px 3px 2px var(--color-near-white);
+        }
       }
     }
   }

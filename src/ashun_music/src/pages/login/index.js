@@ -1,15 +1,25 @@
 import { memo, useState } from "react";
 import { withRouter } from "react-router";
+import { useDispatch } from "react-redux";
 
 import { LoginWrapper } from "./style.js";
 
 import { setFormState } from "@/utils/setFormState.js";
+import {
+  changeUserAction,
+  toggleIsLoginAction,
+} from "@/store/user/actionCreators.js";
+
+import { useGetUserFromStore } from "@/common/hooks/store-related.js";
 
 const ASLogin = (props) => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
   /* redux hooks */
+  const dispatch = useDispatch();
+  const user = useGetUserFromStore().toJS();
+  const { currentUser } = user;
 
   /* 其它hook */
 
@@ -23,7 +33,28 @@ const ASLogin = (props) => {
   };
 
   const handleLogin = () => {
-    console.log(phone, password);
+    if (!phone || !password) {
+      alert("不要偷懒哦~");
+      return;
+    }
+    if (phone === currentUser.phone) {
+      alert("您已在登陆状态！");
+      return;
+    }
+
+    const findUser = user.users.find((v) => v.phone === phone);
+    if (!findUser) {
+      alert("该用户不存在！");
+      return;
+    } else {
+      if (findUser.password !== password) {
+        alert("密码错误！");
+        return;
+      }
+      dispatch(changeUserAction(phone));
+      dispatch(toggleIsLoginAction(true));
+      alert("登陆成功");
+    }
   };
   /* render相关 */
   const renderForm = () => {
