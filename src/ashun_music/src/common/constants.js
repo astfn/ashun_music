@@ -12,4 +12,11 @@ export const createUser = ({ phone, nickName, password }) => ({
   password,
   playList: defaultPlayList,
   starSongs: [],
+  theme: {
+    "--color-deep": "#ad4e00",
+    "--color-middle": "#d46b08",
+    "--color-shallow": "#fa8c16",
+    "--color-light": "#ffa940",
+    "--color-near-white": "#fff7e6",
+  },
 });

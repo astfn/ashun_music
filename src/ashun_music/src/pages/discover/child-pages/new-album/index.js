@@ -17,7 +17,7 @@ const ASNewAlbum = (props) => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getNewAlbumsAction(100));
+    dispatch(getNewAlbumsAction(54));
   }, [dispatch]);
   /*其它hooks*/
   /*视图相关*/

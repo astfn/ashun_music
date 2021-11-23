@@ -7,6 +7,7 @@ import {
   SIGN_OUT,
   UPDATE_PLAYLIST,
   TOGGLE_ISLOGIN,
+  CHANGE_THEME,
 } from "./constants.js";
 
 const defaultState = Map({
@@ -18,6 +19,7 @@ const defaultState = Map({
     password: "",
     playList: [],
     starSongs: [],
+    theme: {},
   },
 });
 
@@ -45,6 +47,20 @@ export default function userReducer(state = defaultState, action) {
     case TOGGLE_ISLOGIN: {
       const { isLogin } = action;
       return state.setIn(["isLogin"], isLogin);
+    }
+    case CHANGE_THEME: {
+      const { theme } = action;
+      let oldUsers = state.getIn(["users"]);
+      let currentUser = state.getIn(["currentUser"]);
+      const newUsers = oldUsers.map((user) => {
+        if (user.phone === currentUser.phone) {
+          user.theme = theme;
+        }
+        return user;
+      });
+      return state
+        .setIn(["users"], newUsers)
+        .setIn(["currentUser", "theme"], theme);
     }
     case UPDATE_PLAYLIST: {
       const { playList } = action;

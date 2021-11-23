@@ -13,6 +13,7 @@ import {
   useGetUserFromStore,
   useInitialStoreUserFromLocalStorage,
   useUpdateLocalStorageUserfromStore,
+  useSetCurrentThemeFromUser,
 } from "@/common/hooks/store-related.js";
 
 export default withRouter(
@@ -24,6 +25,8 @@ export default withRouter(
     useInitialStoreUserFromLocalStorage();
 
     useUpdateLocalStorageUserfromStore();
+
+    useSetCurrentThemeFromUser();
 
     /* redux hooks */
     const user = useGetUserFromStore().toJS();

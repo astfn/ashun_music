@@ -5,6 +5,7 @@ import {
   TOGGLE_ISLOGIN,
   UPDATE_PLAYLIST,
   INITIAL_FROM_LOCALSTORAGE,
+  CHANGE_THEME,
 } from "./constants.js";
 
 export const initialFromLocalStorageAction = (userData) => ({
@@ -26,4 +27,9 @@ export const updatePlayListAction = (playList) => ({
 export const toggleIsLoginAction = (isLogin) => ({
   type: TOGGLE_ISLOGIN,
   isLogin,
+});
+
+export const changeThemeAction = (theme) => ({
+  type: CHANGE_THEME,
+  theme,
 });

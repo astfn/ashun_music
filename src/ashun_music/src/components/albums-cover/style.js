@@ -30,7 +30,9 @@ export const ASAlbumsCoverWrapper = styled.div`
 
     .artist {
       .name {
+        display: block;
         color: #666;
+        width: 115px;
       }
     }
   }

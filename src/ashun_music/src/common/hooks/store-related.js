@@ -4,6 +4,8 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { useLocalStorage } from "./index.js";
 import { initialFromLocalStorageAction } from "@/store/user/actionCreators.js";
 
+import { switchTheme } from "@/utils//switchTheme.js";
+
 /* get */
 export const useGetUserFromStore = () => {
   const user = useSelector((store) => store.getIn(["user"]), shallowEqual);
@@ -28,6 +30,15 @@ export const useInitialStoreUserFromLocalStorage = () => {
       dispatch(initialFromLocalStorageAction(userLocal));
     }
   }, [dispatch, userLocal]);
+};
+
+//若用户登录，设置为用户theme
+export const useSetCurrentThemeFromUser = () => {
+  const user = useGetUserFromStore().toJS();
+  const { isLogin, currentUser } = user;
+  if (isLogin) {
+    switchTheme(currentUser.theme);
+  }
 };
 
 // //若用户登录，当操作player时，将其更新到该user的数据中
